@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Container from '../../components/Container';
+import SectionPt from '../../components/SectionPt';
+import SectionEn from '../../components/SectionEn';
 
 export default class Home extends Component {
   constructor(props) {
@@ -11,9 +13,8 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        <div>
-          <h1>Hello world</h1>
-        </div>
+        <SectionPt />
+        <SectionEn />
       </Container>
     );
   }

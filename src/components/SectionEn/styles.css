@@ -1,0 +1,13 @@
+.en {
+  background: #fa7b24;
+  transition: all .3s;
+  flex-direction: column;
+  color: #fff;
+  padding: 10px;
+  line-height: 1;
+  width: 100%;
+  float: left;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
