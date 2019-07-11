@@ -5,9 +5,9 @@ import {
   Col
 } from 'react-bootstrap';
 
-import PageContainer from '../../components/PageContainer';
-import SectionPt from '../../components/SectionPt';
-import SectionEn from '../../components/SectionEn';
+import PageContainer from '../../components/public/PageContainer';
+import SectionPt from '../../components/PT/SectionPt';
+import SectionEn from '../../components/EN/SectionEn';
 
 export default class Home extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import logoFooter from '../../img/logo-horizontal-branco.webp';
+import logoFooter from '../../../img/logo-horizontal-branco.webp';
 
 import './styles.css';
 

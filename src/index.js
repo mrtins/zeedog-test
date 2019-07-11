@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import './styles.css';
 
 import Home from './pages/Home';
+import Selection from './pages/Selection';
 
 const App = () => (
   <Router basename="/">
     <div className="heigth-full">
       <Route exact path='/' component={Home} />
+      <Route exact path='/selection/:lang' component={Selection} />
     </div>
   </Router>
 );
