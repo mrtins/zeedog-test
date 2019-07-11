@@ -1,12 +1,5 @@
-.container {
-  height: 100vh;
-  width: 100vw;
-  flex-direction: row;
-  overflow: hidden;
-}
-
 footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   background: #000;
   left: 0;

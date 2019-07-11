@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import Container from '../../components/Container';
+import {
+  Container,
+  Row,
+  Col
+} from 'react-bootstrap';
+
+import PageContainer from '../../components/PageContainer';
 import SectionPt from '../../components/SectionPt';
 import SectionEn from '../../components/SectionEn';
 
@@ -12,10 +18,18 @@ export default class Home extends Component {
 
   render() {
     return (
-      <Container>
-        <SectionPt />
-        <SectionEn />
-      </Container>
+      <div>
+        <PageContainer>
+          <Row noGutters>
+            <Col sm={6}>
+              <SectionPt />
+            </Col>
+            <Col sm={6}>
+              <SectionEn />
+            </Col>
+          </Row>
+        </PageContainer>
+      </div>
     );
   }
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './styles.css';
-
 import logoFooter from '../../img/logo-horizontal-branco.webp';
 
-export default class Container extends Component {
+import './styles.css';
+
+export default class PageContainer extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ export default class Container extends Component {
 
   render() {
     return (
-      <section className="container flex">
+      <section>
         {this.props.children}
 
         <footer>

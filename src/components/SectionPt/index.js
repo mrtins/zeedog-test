@@ -13,9 +13,8 @@ export default class SectionPt extends Component {
 
   render() {
     return (
-      <section className="pt-br">
-        
-      </section>
+      <div className="pt-br">
+      </div>
     )
   }
   

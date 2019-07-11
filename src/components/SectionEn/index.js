@@ -13,9 +13,8 @@ export default class SectionPt extends Component {
 
   render() {
     return (
-      <section className="en">
-        
-      </section>
+      <div className="en">
+      </div>
     )
   }
   
