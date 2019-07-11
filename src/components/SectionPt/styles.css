@@ -1,11 +1,3 @@
 .pt-br {
   background: #23b2e3;
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-  transition: all .3s;
-  color: #fff;
-  line-height: 1;
-  position: relative;
-  z-index: 2;
 }
