@@ -2,6 +2,7 @@
   "name": "zeedog-test",
   "version": "0.1.0",
   "private": true,
+  "proxy": "",
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",

@@ -10,7 +10,8 @@ export default class Selection extends Component {
     super(props);
 
     this.state = {
-      lang: props.match.params.lang
+      lang: props.match.params.lang,
+      breeds: [],
     }
 
     this.getData = this.getData.bind(this);
@@ -20,10 +21,11 @@ export default class Selection extends Component {
     this.getData();
   }
 
-  getData() {
-    axios.get('https://s3-sa-east-1.amazonaws.com/zee.dog/athena/breedSizes.json', { crossdomain: true }).then(data => {
-      console.log(data);
-    }).catch(err => console.log(err))
+  async getData() {
+    await axios.get('https://s3-sa-east-1.amazonaws.com/zee.dog/athena/breedSizes.json').then(async res => {
+      const arr = Object.keys(res.data).map((k) => res.data[k]);      // Convertendo para array de objetos
+      await this.setState({ breeds: arr });
+    }).catch(err => console.log(err));
   }
 
   render() {
@@ -31,8 +33,12 @@ export default class Selection extends Component {
       <div>
         <PageContainer>
           <div>
-            {this.state.lang === 'pt' ?
-              <SelectionPt /> : <SelectionEn />
+            {this.state.breeds.length === 0 ? <div>carregando</div> :
+              <div>
+                {this.state.lang === 'pt' ?
+                  <SelectionPt breeds={this.state.breeds} /> : <SelectionEn />
+                }
+              </div>
             }
           </div>
         </PageContainer>

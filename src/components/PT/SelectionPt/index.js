@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Select from 'react-select';
+import AsyncSelect from 'react-select/async';
 
 import './styles.css';
 
@@ -11,10 +11,40 @@ export default class SelectionPt extends Component {
     super(props)
 
     this.state = {
-
+      options: [],
     }
 
+    this.renderOptions = this.renderOptions.bind(this);
   }
+
+  async componentDidMount() {
+    await this.renderOptions();
+  }
+
+  async renderOptions() {
+    let options = [];
+
+    await this.props.breeds.map((breed, i) => {
+      return options.push({
+        label: breed.pt_name,
+        value: breed.pt_name,
+      });
+    });
+
+    await this.setState({ options });
+  }
+
+  getOptions = (input) => {
+    console.log('getOptions', this.state)
+    return this.state.options.filter(option => option.label.toLowerCase().includes(input.toLowerCase()));
+  }
+
+  promiseOptions = inputValue =>
+    new Promise(resolve => {
+      setTimeout(() => {
+        resolve(this.getOptions(inputValue));
+      }, 1000);
+    });
 
   render() {
     return (
@@ -30,9 +60,11 @@ export default class SelectionPt extends Component {
           <p className="subtitle">Veja o que cachorros da mesma raça usam</p>
         </div>
 
-        <div>
-          <Select options={this.props.options} />
-        </div>
+        {this.state.options.length === 0 ? null :
+          <div>
+            <AsyncSelect cacheOptions defaultOptions loadOptions={this.promiseOptions} />
+          </div>
+        }
       </div>
     )
   }
