@@ -5,6 +5,7 @@ import AsyncSelect from 'react-select/async';
 import './styles.css';
 
 import returnBtn from '../../../img/return-btn.webp';
+import selectPt from '../../../img/dropdown-balloon.webp';
 
 export default class SelectionPt extends Component {
   constructor(props) {
@@ -35,7 +36,6 @@ export default class SelectionPt extends Component {
   }
 
   getOptions = (input) => {
-    console.log('getOptions', this.state)
     return this.state.options.filter(option => option.label.toLowerCase().includes(input.toLowerCase()));
   }
 
@@ -62,7 +62,13 @@ export default class SelectionPt extends Component {
 
         {this.state.options.length === 0 ? null :
           <div>
-            <AsyncSelect cacheOptions defaultOptions loadOptions={this.promiseOptions} />
+            <AsyncSelect
+              placeholder="Selecione uma raça"
+              cacheOptions
+              defaultOptions
+              onChange={this.props.handleChange}
+              loadOptions={this.promiseOptions}
+            />
           </div>
         }
       </div>

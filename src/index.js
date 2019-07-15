@@ -7,12 +7,14 @@ import './styles.css';
 
 import Home from './pages/Home';
 import Selection from './pages/Selection';
+import Dog from './pages/Dog';
 
 const App = () => (
   <Router basename="/">
     <div className="heigth-full">
       <Route exact path='/' component={Home} />
       <Route exact path='/selection/:lang' component={Selection} />
+      <Route exact path='/dog/:breed' component={Dog} />
     </div>
   </Router>
 );

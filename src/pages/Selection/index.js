@@ -8,17 +8,18 @@ import SelectionEn from '../../components/EN/SelectionEn';
 export default class Selection extends Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       lang: props.match.params.lang,
       breeds: [],
     }
 
     this.getData = this.getData.bind(this);
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
-    this.getData();
+    return this.getData();
   }
 
   async getData() {
@@ -26,6 +27,12 @@ export default class Selection extends Component {
       const arr = Object.keys(res.data).map((k) => res.data[k]);      // Convertendo para array de objetos
       await this.setState({ breeds: arr });
     }).catch(err => console.log(err));
+  }
+
+  handleChange(e) {
+    const breed = this.state.breeds.find(el => (el.pt_name || el.en_name) === e.label);
+
+    return this.props.history.push(`/dog/${breed.fullName}`, { breed });
   }
 
   render() {
@@ -36,7 +43,7 @@ export default class Selection extends Component {
             {this.state.breeds.length === 0 ? <div>carregando</div> :
               <div>
                 {this.state.lang === 'pt' ?
-                  <SelectionPt breeds={this.state.breeds} /> : <SelectionEn />
+                  <SelectionPt breeds={this.state.breeds} handleChange={this.handleChange} /> : <SelectionEn />
                 }
               </div>
             }
