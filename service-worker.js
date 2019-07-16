@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mrtins.github.io/zeedog-test/precache-manifest.be27acb3126b556a93b84409a5070f57.js"
+  "/mrtins.github.io/zeedog-test/precache-manifest.13a2ca263d445a61ba39acc8917cb329.js"
 );
 
 self.addEventListener('message', (event) => {
