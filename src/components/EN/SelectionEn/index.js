@@ -5,8 +5,6 @@ import {
   Col
 } from 'react-bootstrap';
 
-import './styles.css';
-
 import returnBtn from '../../../img/return-btn-en.webp';
 import disclaimerEn from '../../../img/disclaimer-en.webp';
 

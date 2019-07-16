@@ -1,1 +1,0 @@
-export const baseURL = "https://s3-sa-east-1.amazonaws.com/zee.dog/athena/breedSizes.json";
