@@ -61,3 +61,48 @@ body {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+.table-bg-pt {
+  background-image: url('./img/table-background.webp');
+}
+
+.table-bg-en {
+  background-image: url('./img/table-background-en.webp');
+}
+
+.table-dog {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.label {
+  color: #2d3d8d;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.size-pt {
+  background-image: url('./img/td-bg-1.webp');
+}
+
+.size-en {
+  background-image: url('./img/td-bg-1-en.webp');
+}
+
+.suggested-size {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #fff;
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  margin-left: 15px;
+  text-transform: uppercase;
+}

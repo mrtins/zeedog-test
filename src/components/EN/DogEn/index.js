@@ -5,32 +5,31 @@ import {
   Col
 } from 'react-bootstrap';
 
-import disclaimerDogPt from '../../../img/disclaimer-br-breed.webp';
-import returnBtnDogPt from '../../../img/return-btn-2.webp';
+import disclaimerDogEn from '../../../img/disclaimer-en-breed.webp';
+import returnBtnDogPt from '../../../img/return-btn-2-en.webp';
 
 export default props => (
-  <div className="section-home pt-br">
-    {console.log(props)}
+  <div className="section-home en">
     <Row>
       <Col>
         <div style={{ marginTop: '60px' }}>
-          <img src={disclaimerDogPt} alt="Cães da mesma raça podem usar tamanhos diferentes. Pense nisso!" width="250px" />
+          <img src={disclaimerDogEn} alt="Dogs of the same breed may vary in size. Consider that!" width="250px" />
         </div>
       </Col>
 
       <Col>
         <div>
-          <h3 className="title">{props.breed.pt_name}</h3>
-          <p className="subtitle">Ou porte parecido</p>
-          <img src={props.breed.image} alt={props.breed.pt_name} width="400px" />
+          <h3 className="title">{props.breed.en_name}</h3>
+          <p className="subtitle">Or similar size</p>
+          <img src={props.breed.image} alt={props.breed.en_name} width="400px" />
         </div>
       </Col>
 
       <Col>
         <div>
-          <Link to="/selection/pt-br" className="return-btn-selection">
+          <Link to="/selection/en" className="return-btn-selection">
             <button className="btn">
-              <img src={returnBtnDogPt} alt="Escolher outra raça" width="50%" />
+              <img src={returnBtnDogPt} alt="Choose another breed" width="50%" />
             </button>
           </Link>
         </div>
@@ -38,43 +37,17 @@ export default props => (
     </Row>
 
     <Row>
-      <div className="table-dog table-bg-pt">
+      <div className="table-dog table-bg-en">
         <div style={{ marginTop: '40px', marginBottom: '60px' }}>
           <Row>
             <Col>
               <div style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <Row>
                   <Col>
-                    <span className="label">Guia</span>
+                    <span className="label">Leash</span>
                   </Col>
                   <Col>
-                    <span className="suggested-size size-pt">{props.breed.leash[0]}</span>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-            <Col>
-              <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <Row>
-                  <Col>
-                    <span className="label">Coleira</span>
-                  </Col>
-                  <Col>
-                    <span className="suggested-size size-pt">{props.breed.stepin[0]}</span>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <Row>
-                  <Col>
-                    <span className="label">Guia com amortecedor</span>
-                  </Col>
-                  <Col>
-                    <span className="suggested-size size-pt">{props.breed.soft_walk[0]}</span>
+                    <span className="suggested-size size-en">{props.breed.leash[0]}</span>
                   </Col>
                 </Row>
               </div>
@@ -83,10 +56,10 @@ export default props => (
               <div style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <Row>
                   <Col>
-                    <span className="label">Coleira de obediência</span>
+                    <span className="label">Collar</span>
                   </Col>
                   <Col>
-                    <span className="suggested-size size-pt">{props.breed.obedience[0]}</span>
+                    <span className="suggested-size size-en">{props.breed.stepin[0]}</span>
                   </Col>
                 </Row>
               </div>
@@ -97,10 +70,10 @@ export default props => (
               <div style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <Row>
                   <Col>
-                    <span className="label">Peitoral</span>
+                    <span className="label">Shock absorbent leash</span>
                   </Col>
                   <Col>
-                    <span className="suggested-size size-pt">{props.breed.leash_ruff[0]}</span>
+                    <span className="suggested-size size-en">{props.breed.soft_walk[0]}</span>
                   </Col>
                 </Row>
               </div>
@@ -109,10 +82,36 @@ export default props => (
               <div style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <Row>
                   <Col>
-                    <span className="label">Peitoral com mesh-plus</span>
+                    <span className="label">Obedience collar</span>
                   </Col>
                   <Col>
-                    <span className="suggested-size size-pt">{props.breed.meshplus[0]}</span>
+                    <span className="suggested-size size-en">{props.breed.obedience[0]}</span>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+                <Row>
+                  <Col>
+                    <span className="label">Harness</span>
+                  </Col>
+                  <Col>
+                    <span className="suggested-size size-en">{props.breed.leash_ruff[0]}</span>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+            <Col>
+              <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+                <Row>
+                  <Col>
+                    <span className="label">Mesh plus harness</span>
+                  </Col>
+                  <Col>
+                    <span className="suggested-size size-en">{props.breed.meshplus[0]}</span>
                   </Col>
                 </Row>
               </div>

@@ -9,7 +9,7 @@ import SelectionEn from '../../components/EN/SelectionEn';
 export default class Selection extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       lang: props.match.params.lang,
       breeds: [],
@@ -44,7 +44,15 @@ export default class Selection extends Component {
             {this.state.breeds.length === 0 ? <LoadingSpinner lang={this.state.lang} /> :
               <div>
                 {this.state.lang === 'pt-br' ?
-                  <SelectionPt breeds={this.state.breeds} handleChange={this.handleChange} /> : <SelectionEn />
+                  <SelectionPt
+                    breeds={this.state.breeds}
+                    handleChange={this.handleChange}
+                  />
+                  :
+                  <SelectionEn
+                    breeds={this.state.breeds}
+                    handleChange={this.handleChange}
+                  />
                 }
               </div>
             }

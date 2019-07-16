@@ -21,7 +21,7 @@ export default class SectionPt extends Component {
           <p className="text">No worries, we'll help you!</p>
           <Link to="/selection/en">
             <button className="btn">
-              <img src={btnEn} alt="Clique aqui" width='300px' />
+              <img src={btnEn} alt="Click here" width='300px' />
             </button>
           </Link>
         </div>
