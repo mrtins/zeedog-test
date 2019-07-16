@@ -5,7 +5,6 @@ import AsyncSelect from 'react-select/async';
 import './styles.css';
 
 import returnBtn from '../../../img/return-btn.webp';
-import selectPt from '../../../img/dropdown-balloon.webp';
 
 export default class SelectionPt extends Component {
   constructor(props) {

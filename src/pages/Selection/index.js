@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import LoadingSpinner from '../../components/public/LoadingSpinner';
 import PageContainer from '../../components/public/PageContainer';
 import SelectionPt from '../../components/PT/SelectionPt';
 import SelectionEn from '../../components/EN/SelectionEn';
@@ -40,9 +41,9 @@ export default class Selection extends Component {
       <div>
         <PageContainer>
           <div>
-            {this.state.breeds.length === 0 ? <div>carregando</div> :
+            {this.state.breeds.length === 0 ? <LoadingSpinner lang={this.state.lang} /> :
               <div>
-                {this.state.lang === 'pt' ?
+                {this.state.lang === 'pt-br' ?
                   <SelectionPt breeds={this.state.breeds} handleChange={this.handleChange} /> : <SelectionEn />
                 }
               </div>

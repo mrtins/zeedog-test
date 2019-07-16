@@ -19,7 +19,7 @@ export default class SectionPt extends Component {
           <p className="text">PT</p>
           <h2 className="title">Tá com dúvida no tamanho?</h2>
           <p className="text">Relaxa que a gente te ajuda!</p>
-          <Link to="/selection/pt">
+          <Link to="/selection/pt-br">
             <button className="btn">
               <img src={btnPt} alt="Clique aqui" width='300px' />
             </button>
