@@ -33,7 +33,7 @@ export default class Selection extends Component {
   handleChange(e) {
     const breed = this.state.breeds.find(el => (el.pt_name || el.en_name) === e.label);
 
-    return this.props.history.push(`/dog/${breed.fullName}`, { breed });
+    return this.props.history.push(`/dog/${this.state.lang}/${breed.fullName}`, { breed });
   }
 
   render() {

@@ -14,7 +14,7 @@ const App = () => (
     <div className="heigth-full">
       <Route exact path='/' component={Home} />
       <Route exact path='/selection/:lang' component={Selection} />
-      <Route exact path='/dog/:breed' component={Dog} />
+      <Route exact path='/dog/:lang/:breed' component={Dog} />
     </div>
   </Router>
 );
